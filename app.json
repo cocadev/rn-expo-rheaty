@@ -1,30 +1,46 @@
 {
   "expo": {
-    "name": "heaty",
-    "slug": "heaty",
-    "privacy": "public",
-    "sdkVersion": "35.0.0",
+    "name": "Heaty",
+    "description": "Google Auth/MapView/Autocomplete-expo 35",
+    "slug": "unibuzz-2",
+    "privacy": "unlisted",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
+    "sdkVersion": "35.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
+    },
+    "loading": {
+      "icon": "./assets/images/loading-icon.png",
+      "hideExponentText": false
+    },
+    "packagerOpts": {
+      "assetExts": [
+        "ttf",
+        "mp4",
+        "otf",
+        "xml"
+      ]
+    },
+    "android": {
+      "package": "com.wang"
+    },
+    "ios": {
+      "supportsTablet": true
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    }
+    ]
   }
 }

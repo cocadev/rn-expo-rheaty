@@ -5,7 +5,7 @@ import Forgot from './screens/Login/forgot'
 
 import { KeyboardAvoidingView, Platform, Dimensions } from 'react-native'
 import { Scene, Router, Drawer } from 'react-native-router-flux'
-import { Font } from 'expo'
+import * as Font from 'expo-font';
 
 import SideMenu from './SideMenu';
 import Wall from './screens/Dashboard/wall';
@@ -47,7 +47,6 @@ export default class App extends PureComponent {
       'Montserrat-Regular': require('../assets/fonts/Montserrat-Regular.ttf'),
       'Montserrat-SemiBold': require('../assets/fonts/Montserrat-SemiBold.ttf'),
       'Montserrat-SemiBoldItalic': require('../assets/fonts/Montserrat-SemiBoldItalic.ttf'),
-      'Montserrat-SemiBold': require('../assets/fonts/Montserrat-SemiBold.ttf'),
       'Montserrat-Thin': require('../assets/fonts/Montserrat-Thin.ttf'),
       'Montserrat-ThinItalic': require('../assets/fonts/Montserrat-ThinItalic.ttf'),
 
