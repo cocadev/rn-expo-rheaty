@@ -24,7 +24,7 @@
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
-    "react-native-app-intro-slider": "^3.0.0",
+    "react-native-app-intro-slider": "^2.0.1",
     "react-native-banner-carousel": "^1.0.3",
     "react-native-checkbox-heaven": "^0.1.6",
     "react-native-drawer": "^2.5.1",

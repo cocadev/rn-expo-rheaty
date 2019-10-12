@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component} from 'react';
 import { View, StyleSheet, Image, Text, TextInput, TouchableOpacity, Modal, ToastAndroid, Dimensions, KeyboardAvoidingView, ScrollView } from 'react-native';
 import { colors } from '../../common/colors';
 import { images } from '../../common/images';
@@ -16,7 +16,7 @@ const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 
-class SignIn extends React.Component {
+class SignIn extends Component {
 
     state = {
         email: '',

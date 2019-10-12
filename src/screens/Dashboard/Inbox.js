@@ -24,9 +24,13 @@ class Inbox extends React.Component {
     header: null,
   };
 
-  state = {
-    isVisible: false,
+  constructor(props) {
+    super(props);
+    this.state = {
+      isVisible: false,
+    }
   }
+
 
   showPopover() {
     this.setState({ isVisible: true });

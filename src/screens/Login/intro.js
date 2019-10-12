@@ -49,7 +49,7 @@ const slides = [
 
 export default class Intro extends Component {
 
-    _renderItem = (item) => {
+    renderItem = (item) => {
         console.log('PPPPPPPPPPPPPP', item)
         return (
             <LinearGradient
@@ -96,7 +96,7 @@ export default class Intro extends Component {
     render() {
         return (
             <AppIntroSlider
-                renderItem={this._renderItem}
+                renderItem={(item) => this.renderItem.bind(this, item)}
                 slides={slides}
                 onDone={this._onDone}
                 renderDoneButton={this._renderDoneButton}
