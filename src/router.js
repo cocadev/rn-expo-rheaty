@@ -1,28 +1,28 @@
 import React, { PureComponent } from 'react'
-import SignIn from './screens/Login/signIn'
-import SignUp from './screens/Login/signup'
-import Forgot from './screens/Login/forgot'
+// import SignIn from './screens/Login/signIn'
+// import SignUp from './screens/Login/signup'
+// import Forgot from './screens/Login/forgot'
 
 import { KeyboardAvoidingView, Platform, Dimensions } from 'react-native'
 import { Scene, Router, Drawer } from 'react-native-router-flux'
 import * as Font from 'expo-font';
 
-import SideMenu from './SideMenu';
-import Wall from './screens/Dashboard/wall';
-import Intro from './screens/Login/intro';
-import Google from './screens/Login/google';
+// import SideMenu from './SideMenu';
+// import Wall from './screens/Dashboard/wall';
+// import Google from './screens/Login/google';
 
-import WallDetail from './screens/Dashboard/wallDetail';
-import Profile from './screens/Dashboard/Profile';
-import Notification from './screens/Dashboard/Notification';
-import Inbox from './screens/Dashboard/Inbox';
+// import WallDetail from './screens/Dashboard/wallDetail';
+// import Profile from './screens/Dashboard/Profile';
+// import Notification from './screens/Dashboard/Notification';
+// import Inbox from './screens/Dashboard/Inbox';
+import Intro from './screens/Login/intro';
 
 const width = Dimensions.get('window').width
 
 export default class App extends PureComponent {
 
   state = {
-    fontLoaded: true,
+    fontLoaded: false,
   };
 
   async componentDidMount() {
@@ -68,7 +68,7 @@ export default class App extends PureComponent {
           <Router>
             <Scene>
               <Scene key="intro" component={Intro} hideNavBar/>
-              <Scene key="signin" component={SignIn} hideNavBar initial={false}/>
+              {/* <Scene key="signin" component={SignIn} hideNavBar initial={false}/>
               <Scene key="signup" component={SignUp} hideNavBar initial={false}/>
               <Scene key="forgot" component={Forgot} initial={false} hideNavBar/>
               <Scene key="google" component={Google} initial={false} hideNavBar/>
@@ -88,7 +88,7 @@ export default class App extends PureComponent {
                 <Scene key="notification" component={Notification} initial={false} hideNavBar/>
                 <Scene key="inbox" component={Inbox} initial={false} hideNavBar/>
 
-              </Drawer>
+              </Drawer> */}
             </Scene>
           </Router>
           : null}

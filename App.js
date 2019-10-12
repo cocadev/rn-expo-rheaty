@@ -1,12 +1,12 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import Router from './src/router';
 
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 
 import { configureStore } from './src/store';   
 const store = configureStore();
 
-export default class Driver extends PureComponent {
+export default class App extends Component {
   render() {
     return (
       <Provider store={store}>

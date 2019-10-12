@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { Actions } from 'react-native-router-flux';
@@ -47,26 +47,27 @@ const slides = [
     }
 ];
 
-export default class Intro extends React.Component {
+export default class Intro extends Component {
 
-    _renderItem = (props) => {
+    _renderItem = (item) => {
+        console.log('PPPPPPPPPPPPPP', item)
         return (
             <LinearGradient
                 style={[styles.mainContent, {
-                    width: props.width,
-                    height: props.height,
+                    width: item.width,
+                    height: item.height,
                 }]}
-                colors={props.colors}
+                colors={item.colors}
                 start={{ x: 0, y: .1 }} end={{ x: .1, y: 1 }}
             >
                 <View>
-                    <Text style={styles.title}>{props.title}</Text>
-                    <Text style={styles.text}>{props.text}</Text>
+                    <Text style={styles.title}>{item.title}</Text>
+                    <Text style={styles.text}>{item.text}</Text>
                 </View>
 
-                <Image style={{ backgroundColor: 'transparent', width: props.widths, height: props.heights }} source={props.image} />
+                <Image style={{ backgroundColor: 'transparent', width: item.widths, height: item.heights }} source={item.image} />
 
-                <Text style={styles.description}>{props.description}</Text>
+                <Text style={styles.description}>{item.description}</Text>
 
 
             </LinearGradient>
@@ -80,14 +81,14 @@ export default class Intro extends React.Component {
     _renderNextButton = () => {
         return (
             <View style={styles.nextbtn}>
-                <Text style={{fontSize:15, fontFamily:'Montserrat-SemiBold'}}>NEXT</Text>
+                <Text style={{fontSize:15, fontFamily:'Montserrat-SemiBoldItalic'}}>NEXT</Text>
             </View>
         );
     }
     _renderDoneButton = () => {
         return (
             <View style={[styles.nextbtn, {backgroundColor:colors.RED}]}>
-                <Text style={{fontSize:15, fontFamily:'Montserrat-SemiBold', color:colors.WHITE}}>GET STARTED</Text>
+                <Text style={{fontSize:15, fontFamily:'Montserrat-SemiBoldItalic', color:colors.WHITE}}>GET STARTED</Text>
             </View>
         );
     }
@@ -101,6 +102,7 @@ export default class Intro extends React.Component {
                 renderDoneButton={this._renderDoneButton}
                 renderNextButton={this._renderNextButton}
                 bottomButton
+                extraData={this.state}
             />
         )
 
@@ -119,7 +121,7 @@ const styles = StyleSheet.create({
         color: 'rgba(255, 255, 255, 0.8)',
         backgroundColor: 'transparent',
         textAlign: 'center',
-        fontFamily:'Montserrat-SemiBold',
+        fontFamily:'Montserrat-SemiBoldItalic',
         fontSize:36
     },
     description: {
