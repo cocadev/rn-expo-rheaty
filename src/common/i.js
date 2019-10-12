@@ -1,4 +1,5 @@
 import {colors}  from "./colors";
+import { p } from "./normalize";
 
 export default{
     container : {    
@@ -7,18 +8,18 @@ export default{
     },
     mainHeader: {
         width: '100%',
-        paddingHorizontal: 12,
+        paddingHorizontal: p(12),
         backgroundColor: '#fff',
         elevation: 3,
-        paddingVertical:4
+        paddingVertical:p(4)
     },
     textinput:{
-        height: 36,
+        height: p(36),
         borderColor: colors.GREY2,
-        borderRadius: 5,
+        borderRadius: p(5),
         borderWidth: 1,
-        paddingLeft: 10,
-        fontSize:18
+        paddingLeft: p(10),
+        fontSize:p(18)
     },
     indicatorContainer: {
         flex: 1,
@@ -27,9 +28,9 @@ export default{
         justifyContent: "center"
     },
     indicator: {
-        width: 80,
-        height: 80,
-        borderRadius: 5,
+        width: p(80),
+        height: p(80),
+        borderRadius: p(5),
         shadowColor: "black",
         alignItems: "center",
         justifyContent: "center",
@@ -40,12 +41,12 @@ export default{
     },
     smallText:{
         fontFamily:'Montserrat-Medium',
-        fontSize:10,
+        fontSize:p(10),
         color:colors.DARK2
     },
     normalText:{
         color: colors.DARK, 
         fontFamily: 'Montserrat-Medium', 
-        fontSize: 13
+        fontSize: p(13)
     }
 }

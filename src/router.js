@@ -68,6 +68,7 @@ export default class App extends PureComponent {
           <Router>
             
             <Scene>
+              <Scene key="walldetail" component={WallDetail} initial={false} hideNavBar/>
               <Scene key="intro" component={Intro} hideNavBar/>
               <Scene key="signin" component={SignIn} hideNavBar initial={false}/>
               <Scene key="signup" component={SignUp} hideNavBar initial={false}/>

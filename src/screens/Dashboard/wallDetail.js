@@ -10,6 +10,7 @@ import MaterialTabs from 'react-native-material-tabs';
 import GradientButton from '../../components/GradientButton';
 import AvatarTag from '../../components/AvatarTag';
 import text from '../../common/text';
+import { p } from '../../common/normalize';
 
 const width = Dimensions.get('window').width
 
@@ -32,15 +33,15 @@ class WallDetail extends React.Component {
   };
 
   _renderItem2 = ({ item }) => (
-    <TouchableOpacity style={{ marginHorizontal: 5, borderRadius: 4 }}>
+    <TouchableOpacity style={{ marginHorizontal: p(5), borderRadius: 4 }}>
 
-      <Image source={{ uri: item.image }} style={{ width: width / 3 - 18, height: width / 3 - 18, borderRadius: 4 }} />
+      <Image source={{ uri: item.image }} style={{ width: width / 3 - p(18), height: width / 3 - p(18), borderRadius: 4 }} />
       <Image source={{ uri: item.user }} style={styles.circle} />
       <Image source={images.icon_dank} style={styles.danks} />
 
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 10 }}>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: p(10) }}>
         <Text style={i.smallText}>{item.title}</Text>
-        <Image source={images.result} style={{ width: 20, height: 10 }} />
+        <Image source={images.result} style={{ width: p(20), height: p(10) }} />
       </View>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
         <Text style={i.smallText}>Service 2</Text>
@@ -77,24 +78,24 @@ class WallDetail extends React.Component {
             </View>
           </View>
 
-          <View style={{ paddingHorizontal: 16, marginBottom: 40 }}>
+          <View style={{ paddingHorizontal: p(16), marginBottom: p(40) }}>
             <Text style={[i.normalText, { width: width / 1.4 }]}>Best Snow Cleaning Service lorem orem ipsum dolor sit amet.</Text>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginVertical: 7, }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginVertical: p(7), }}>
 
               <View>
                 <View style={{ flexDirection: 'row' }}>
-                  <Image source={images.icon_rating} style={{ width: 10, height: 10 }} />
-                  <Image source={images.icon_rating} style={{ width: 10, height: 10 }} />
-                  <Image source={images.icon_rating} style={{ width: 10, height: 10 }} />
-                  <Image source={images.icon_rating} style={{ width: 10, height: 10 }} />
-                  <Image source={images.icon_rating} style={{ width: 10, height: 10 }} />
+                  <Image source={images.icon_rating} style={{ width: p(10), height: p(10) }} />
+                  <Image source={images.icon_rating} style={{ width: p(10), height: p(10) }} />
+                  <Image source={images.icon_rating} style={{ width: p(10), height: p(10) }} />
+                  <Image source={images.icon_rating} style={{ width: p(10), height: p(10) }} />
+                  <Image source={images.icon_rating} style={{ width: p(10), height: p(10) }} />
                 </View>
                 <Text style={i.smallText}>S(115)</Text>
               </View>
 
               <View>
                 <Text style={i.smallText}>PRICE</Text>
-                <Text style={[i.normalText, { color: colors.RED, fontSize: 13, fontFamily: 'Montserrat-Bold' }]}>$25 / Hour</Text>
+                <Text style={[i.normalText, { color: colors.RED, fontSize: p(13), fontFamily: 'Montserrat-Bold' }]}>$25 / Hour</Text>
               </View>
 
             </View>
@@ -103,8 +104,8 @@ class WallDetail extends React.Component {
 
           </View>
 
-          <View style={{ backgroundColor: '#fff', paddingHorizontal: 12, paddingTop: 20 }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginHorizontal: 12, marginTop: -40, }}>
+          <View style={{ backgroundColor: '#fff', paddingHorizontal: p(12), paddingTop: p(20) }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginHorizontal: p(12), marginTop: p(-40), }}>
               <View style={[styles.roundBtn, { backgroundColor: '#fff' }]}>
                 <Text style={i.normalText}>CONTACT SELLER</Text>
               </View>
@@ -112,35 +113,35 @@ class WallDetail extends React.Component {
                 <Text style={i.normalText}>ORDER NOW</Text>
               </View>
             </View>
-            <Text style={{ color: colors.RED, fontSize: 10, fontFamily: 'Montserrat-MediumItalic', textAlign: 'right', marginTop: 12 }}>PLEASE CHECK AVAILABILITY</Text>
+            <Text style={{ color: colors.RED, fontSize: p(10), fontFamily: 'Montserrat-MediumItalic', textAlign: 'right', marginTop: p(12) }}>PLEASE CHECK AVAILABILITY</Text>
             <Text style={i.normalText}>CHECK AVAILABILITY</Text>
           </View>
 
-          <ScrollView horizontal style={{ backgroundColor: '#fff', padding: 12 }}>
+          <ScrollView horizontal style={{ backgroundColor: '#fff', padding: p(12) }}>
             <View style={{ flexDirection: 'row', flex: 2, alignItems: 'center' }}>
               <View style={styles.input}>
-                <Image source={images.icon_map} style={{ width: 12, height: 16 }} />
-                <Text style={[i.smallText, { marginLeft: 5 }]}>35 fountain M2B1RS</Text>
-                <Image source={images.icon_spot} style={{ width: 16, height: 16, marginLeft: 10 }} />
+                <Image source={images.icon_map} style={{ width: p(12), height: p(16) }} />
+                <Text style={[i.smallText, { marginLeft: p(5) }]}>35 fountain M2B1RS</Text>
+                <Image source={images.icon_spot} style={{ width: p(16), height: p(16), marginLeft: p(10) }} />
 
               </View>
             </View>
             <View style={{ flexDirection: 'row', flex: 1 }}>
               <View style={styles.input}>
-                <Image source={images.icon_calendar} style={{ width: 14, height: 15 }} />
+                <Image source={images.icon_calendar} style={{ width: p(14), height: p(15) }} />
                 <Text style={[i.smallText, { marginLeft: 5 }]}>01/03/2019</Text>
               </View>
             </View>
 
             <View style={{ flexDirection: 'row', flex: 1 }}>
               <View style={styles.input}>
-                <Image source={images.icon_clock} style={{ width: 16, height: 16 }} />
+                <Image source={images.icon_clock} style={{ width: p(16), height: p(16) }} />
                 <Text style={[i.smallText, { marginLeft: 5 }]}>10:00 AM</Text>
               </View>
             </View>
 
           </ScrollView>
-          <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#fff', paddingBottom: 12 }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#fff', paddingBottom: p(12) }}>
             <TouchableOpacity>
               <GradientButton title={'CHECK'}/>
             </TouchableOpacity>
@@ -154,36 +155,36 @@ class WallDetail extends React.Component {
             activeTextColor={colors.DARK}
             inactiveTextColor={colors.GREY3}
           />
-          <View style={{ backgroundColor: '#fff', padding: 12 }}>
+          <View style={{ backgroundColor: '#fff', padding: p(12) }}>
             <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 1 }}>
-              <Image source={images.icon_star2} style={{ width: 9, height: 9, marginHorizontal: 3 }} />
-              <Text style={[i.normalText, { fontSize: 9 }]}>Service Detail 1: </Text>
-              <Text style={[i.smallText, { fontSize: 8 }]}>Lorem ipsum dolor sit amet. ex vero efficiendi hones.sit a</Text>
+              <Image source={images.icon_star2} style={{ width: p(9), height: p(9), marginHorizontal: p(3) }} />
+              <Text style={[i.normalText, { fontSize: p(9) }]}>Service Detail 1: </Text>
+              <Text style={[i.smallText, { fontSize: p(8) }]}>Lorem ipsum dolor sit amet. ex vero efficiendi hones.sit a</Text>
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 1 }}>
-              <Image source={images.icon_star2} style={{ width: 9, height: 9, marginHorizontal: 3 }} />
-              <Text style={[i.normalText, { fontSize: 9 }]}>Service Detail 2: </Text>
-              <Text style={[i.smallText, { fontSize: 8 }]}>So, in this project, I will use Firebase Cloud Functions </Text>
+              <Image source={images.icon_star2} style={{ width: p(9), height: p(9), marginHorizontal: p(3) }} />
+              <Text style={[i.normalText, { fontSize: p(9) }]}>Service Detail 2: </Text>
+              <Text style={[i.smallText, { fontSize: p(8) }]}>So, in this project, I will use Firebase Cloud Functions </Text>
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 1 }}>
-              <Image source={images.icon_star2} style={{ width: 9, height: 9, marginHorizontal: 3 }} />
-              <Text style={[i.normalText, { fontSize: 9 }]}>Service Detail 3: </Text>
-              <Text style={[i.smallText, { fontSize: 8 }]}>That means you can take advantage of ES6+ when writing</Text>
+            <Image source={images.icon_star2} style={{ width: p(9), height: p(9), marginHorizontal: p(3) }} />
+              <Text style={[i.normalText, { fontSize: p(9) }]}>Service Detail 3: </Text>
+              <Text style={[i.smallText, { fontSize: p(8) }]}>That means you can take advantage of ES6+ when writing</Text>
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 1 }}>
-              <Image source={images.icon_star2} style={{ width: 9, height: 9, marginHorizontal: 3 }} />
-              <Text style={[i.normalText, { fontSize: 9 }]}>Service Detail 4: </Text>
-              <Text style={[i.smallText, { fontSize: 8 }]}>I will use this API to manage the contact information as a</Text>
+            <Image source={images.icon_star2} style={{ width: p(9), height: p(9), marginHorizontal: p(3) }} />
+              <Text style={[i.normalText, { fontSize: p(9) }]}>Service Detail 4: </Text>
+              <Text style={[i.smallText, { fontSize: p(8) }]}>I will use this API to manage the contact information as a</Text>
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 1 }}>
-              <Image source={images.icon_star2} style={{ width: 9, height: 9, marginHorizontal: 3 }} />
-              <Text style={[i.normalText, { fontSize: 9 }]}>Service Detail 5: </Text>
-              <Text style={[i.smallText, { fontSize: 8 }]}>Initiate Firebase Hosting</Text>
+            <Image source={images.icon_star2} style={{ width: p(9), height: p(9), marginHorizontal: p(3) }} />
+              <Text style={[i.normalText, { fontSize: p(9) }]}>Service Detail 5: </Text>
+              <Text style={[i.smallText, { fontSize: p(8) }]}>Initiate Firebase Hosting</Text>
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 1 }}>
-              <Image source={images.icon_star2} style={{ width: 9, height: 9, marginHorizontal: 3 }} />
-              <Text style={[i.normalText, { fontSize: 9 }]}>Service Detail 6: </Text>
-              <Text style={[i.smallText, { fontSize: 8 }]}></Text>
+            <Image source={images.icon_star2} style={{ width: p(9), height: p(9), marginHorizontal: p(3) }} />
+              <Text style={[i.normalText, { fontSize: p(9) }]}>Service Detail 6: </Text>
+              <Text style={[i.smallText, { fontSize: p(8) }]}></Text>
             </View>
           </View>
 
@@ -192,8 +193,8 @@ class WallDetail extends React.Component {
             <View style={{ height: width / 4 }}></View>
             <View style={{ height: width / 3, backgroundColor: '#fff', borderBottomColor: colors.GREY4, borderBottomWidth: 2 }}></View>
 
-            <View style={{ position: 'absolute', padding: 12, }}>
-              <Text style={[i.normalText, { marginBottom: 12, marginLeft: 4 }]}>SIMILAR SERVICES</Text>
+            <View style={{ position: 'absolute', padding: p(12), }}>
+              <Text style={[i.normalText, { marginBottom: p(12), marginLeft: p(4) }]}>SIMILAR SERVICES</Text>
               <FlatList
                 horizontal
                 data={SERVICELISTING}
@@ -211,20 +212,20 @@ class WallDetail extends React.Component {
               <AvatarTag />
             </View>
 
-            <View style={{paddingTop:6, paddingLeft:10}}>
-              <Text style={{ color: colors.DARK, fontFamily: 'Montserrat-Medium', fontSize: 11 }}>Johnathan Doe</Text>
-              <Text style={{ color: colors.DARK, fontFamily: 'Montserrat-Medium', fontSize: 11 }}>English | Espanol</Text>
+            <View style={{paddingTop:6, paddingLeft:p(10)}}>
+              <Text style={{ color: colors.DARK, fontFamily: 'Montserrat-Medium', fontSize: p(11) }}>Johnathan Doe</Text>
+              <Text style={{ color: colors.DARK, fontFamily: 'Montserrat-Medium', fontSize: p(11) }}>English | Espanol</Text>
             
             </View>
 
-            <View style={{paddingTop:10, paddingLeft:10}}>
+            <View style={{paddingTop:p(10), paddingLeft:p(10)}}>
               <GradientButton title={'ORDER NOW'}/>
             </View>
           </View>
 
-          <View style={{flexDirection:'row', backgroundColor:'#fff', paddingHorizontal:18, paddingBottom:12}}>
-            <Image source={images.result} style={{ width: 32, height: 12 }} />
-            <View style={{flexDirection:'row', alignItems:'center', marginLeft:20}}>
+          <View style={{flexDirection:'row', backgroundColor:'#fff', paddingHorizontal:p(18), paddingBottom:p(12)}}>
+            <Image source={images.result} style={{ width: p(32), height: p(12) }} />
+            <View style={{flexDirection:'row', alignItems:'center', marginLeft:p(20)}}>
                  <Text style={text.m_8_dark2_b}>PRICE</Text>
                  <Text style={[text.m_9_red, {marginLeft:5}]}>$25 / Hour</Text>
               </View>
@@ -245,44 +246,44 @@ const styles = StyleSheet.create({
   user: {
     borderColor: '#fff',
     borderWidth: 2,
-    borderRadius: 50,
+    borderRadius: p(50),
     width: width / 5,
     height: width / 5,
     position: 'absolute',
-    left: 20,
-    bottom: 5
+    left: p(20),
+    bottom: p(5)
   },
   dank: {
     width: width / 24,
     height: width / 20,
     left: width / 5,
-    bottom: 5
+    bottom: p(5)
   },
   like: {
     width: width / 8,
     height: width / 8,
     right: width / 8,
     position: 'absolute',
-    bottom: -5
+    bottom: p(-5)
   },
   notice: {
     left: width / 3.4,
     position: 'absolute',
-    bottom: 27
+    bottom: p(27)
   },
   input: {
     flexDirection: 'row',
     borderRadius: 3,
     borderColor: colors.GREY3,
     borderWidth: 1,
-    padding: 8,
-    paddingHorizontal: 4,
-    marginRight: 12
+    padding: p(8),
+    paddingHorizontal: p(4),
+    marginRight: p(12)
   },
   roundBtn: {
     width: width / 2.4,
     height: width / 11,
-    borderRadius: 20,
+    borderRadius: p(20),
     backgroundColor: '#f0f0f0',
     elevation: 2,
     // borderWidth:1,
@@ -295,8 +296,8 @@ const styles = StyleSheet.create({
     height: width / 8,
     borderRadius: width / 16,
     position: 'absolute',
-    left: 5,
-    bottom: 25,
+    left: p(5),
+    bottom: p(25),
     borderColor: '#fff',
     borderWidth: 1
   },
@@ -305,7 +306,7 @@ const styles = StyleSheet.create({
     height: width / 24,
     position: 'absolute',
     left: width / 9,
-    bottom: 25,
+    bottom: p(25),
   },
 });
 

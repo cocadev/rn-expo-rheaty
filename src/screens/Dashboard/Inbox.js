@@ -1,22 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity, ScrollView, Dimensions, TouchableHighlight, TextInput } from 'react-native';
-import WallListItem from '../../components/WallListItem'
+import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native';
 import i from '../../common/i'
-import LottieScreen from '../../components/Lottie';
-import api from "../../service/api";
 import Header from '../../components/Header';
 import { images } from '../../common/images';
 import { colors } from '../../common/colors';
-import Cache from "../../utils/cache";
-import { MaterialCommunityIcons, FontAwesome, Ionicons } from '@expo/vector-icons';
-import { Actions } from 'react-native-router-flux';
-import UtilService from '../../utils/utils';
 import text from '../../common/text';
 import { MESSAGES } from '../../common/staticdata';
-import Popover, { Rect, Size } from 'react-native-popover-view';
+import Popover from 'react-native-popover-view';
 import AvatarTag from '../../components/AvatarTag';
-
-const width = Dimensions.get('window').width
 
 class Inbox extends React.Component {
 
