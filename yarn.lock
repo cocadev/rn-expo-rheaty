@@ -1379,10 +1379,10 @@ ansi@^0.3.0, ansi@~0.3.1:
   resolved "https://registry.yarnpkg.com/ansi/-/ansi-0.3.1.tgz#0c42d4fb17160d5a9af1e484bace1c66922c1b21"
   integrity sha1-DELU+xcWDVqa8eSEus4cZpIsGyE=
 
-antd-mobile-rn@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/antd-mobile-rn/-/antd-mobile-rn-2.3.1.tgz#ec922e904dc3365d2c0e7c0830f1360258862b7d"
-  integrity sha512-qQvoTGGZ1LI9z/cmHnRnjmxmlJlSgSaxkJs3mAniLuUjz6OCF8+yqvMXDkkg9veTOwd04qLjBxhfD6vtp5G3yg==
+antd-mobile-rn@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/antd-mobile-rn/-/antd-mobile-rn-2.3.3.tgz#be386da77b763737365ca68abb258bf6816783b3"
+  integrity sha512-bR/81sA25Zf+80/yQop6Y+MVzS03LE1kcyUn0uGxhfcZwM3i8MiKpeQWuAf5lA5by5vH+WpVk1sVe5G5dZzfmQ==
   dependencies:
     array-tree-filter "~2.1.0"
     babel-runtime "6.x"

@@ -1,7 +1,6 @@
 import * as types from "./actionTypes";
 import axios from "axios";
 import { BaseUrl } from "../../config";
-import { Toast, Modal } from "antd-mobile-rn";
 import { Actions } from "react-native-router-flux";
 import _ from 'underscore'
 
@@ -285,13 +284,7 @@ export const createJob = ( CategoryID, UserID, token, Title, Amount, Description
           dispatch({
             type: types.CREATE_JOB
           });
-          Modal.alert(
-            "Job Posted!",
-            "Job reference no: " + response.data.Value,
-            [{ text: "Congratulations", onPress: () => Actions.pop("postjob") }]
-          );
         } else {
-          Toast.fail(" Sorry, your Job is rejected.");
           dispatch({
             type: types.FAILED
           });
@@ -317,13 +310,7 @@ export const createService = ( CategoryID, UserID, token, Title, Amount, Descrip
           dispatch({
             type: types.CREATE_JOB
           });
-          Modal.alert(
-            "Service Posted!",
-            "Service reference no: " + response.data.Value,
-            [{ text: "Congratulations", onPress: () => Actions.pop("postjob") }]
-          );
         } else {
-          Toast.fail(" Sorry, your Service is rejected.");
           dispatch({
             type: types.FAILED
           });
@@ -345,7 +332,6 @@ export const createOffer = (JobID, UserID, Amount, CurrencyCode, token) => {
       )
       .then(function(response) {
         if (response.data.Success) {
-          Toast.success("Congratulations, your offer is created.");
           axios.get( BaseUrl + "Appointment/GetJobByID?ID=" + JobID, { headers: headers }
           ) .then(function(response) {
             if(response.data.Success){ 
@@ -359,7 +345,6 @@ export const createOffer = (JobID, UserID, Amount, CurrencyCode, token) => {
               });
             }})
         } else {
-          Toast.fail(response.data.Message);
           dispatch({
             type: types.FAILED
           });
@@ -388,7 +373,6 @@ export const editOffer = (ID, UserID, Amount, CurrencyCode, token, Job_ID) => {
       .then(function(response) {
 
         if (response.data.Success) {
-          Toast.success("Congratulations, your offer is updated.");
           axios.get( BaseUrl + "Appointment/GetJobByID?ID=" + Job_ID, { headers: headers }
           ) .then(function(response) {
             if(response.data.Success){ 
@@ -402,7 +386,6 @@ export const editOffer = (ID, UserID, Amount, CurrencyCode, token, Job_ID) => {
               });
             }})
         } else {
-          Toast.fail(response.data.Message);
           dispatch({
             type: types.FAILED
           });
@@ -456,10 +439,8 @@ export const cancelOffer = (OfferID, UserID, token) => {
     axios.get( BaseUrl + "Contract/CancelOffer?OfferID=" +  OfferID + "&UserID=" +  UserID, { headers: headers })
       .then(function(response) {
         if(response.data.Success){
-          Toast.success('Cancel Offer Successfully')
           dispatch({ type: types.CANCEL_OFFER });
         } else {
-          Toast.fail('Cancel Offer Rejected!')
           dispatch({ type: types.FAILED })}
       })
       .catch(function(error) {
@@ -547,14 +528,12 @@ export const DeleteJob = (ID, token) => {
   return dispatch => {
     axios .post(BaseUrl + "Appointment/DeleteJob", {ID},  { headers: headers })
       .then(function(response) {
-        Toast.success("Congratulations, your offer is deleted.");
         Actions.pop('viewjob')
 
         var data = response.data.Value;
         dispatch({ type: types.DELETE_JOB, data: data });
       })
       .catch(function(error) {
-        Toast.fail("This Job is deleted yet.");
         dispatch({ type: types.FAILED });
       });
   };
@@ -583,14 +562,12 @@ export const DeleteService = (ID, token) => {
   return dispatch => {
     axios .post(BaseUrl + "Appointment/DeleteJob", {ID},  { headers: headers })
       .then(function(response) {
-        Toast.success("Congratulations, your Service is deleted.");
         Actions.pop('viewjob')
         Actions.pop('servicelisting')
         var data = response.data.Value;
         dispatch({ type: types.DELETE_SERVICE, data: data });
       })
       .catch(function(error) {
-        Toast.fail("This Service is deleted yet.");
         dispatch({ type: types.FAILED });
       });
   };
@@ -604,7 +581,6 @@ export const CreateFavorite = (data, token) => {
   return dispatch => {
     axios .post(BaseUrl + "Appointment/CreateFavorite", {Flag:data.flag, IsJob:data.IsJob, JobID:data.JobID, UserID:data.UserID }, { headers: headers })
       .then(function(response) {
-        Toast.success("Congratulations! Success");
         var data = response.data.Value;
         dispatch({ type: types.CREATE_FAVORITE, data: data });
       })
@@ -667,7 +643,6 @@ export const CreateFavoriteUser = ( UserID1, UserID2, token) => {
   return dispatch => {
     axios .post(BaseUrl + "User/CreateFavorite", {Flag:true, UserID1:UserID1, UserID2:UserID2 }, { headers: headers })
       .then(function(response) {
-        Toast.success("Congratulations, you favourited this User.");
         var data = response.data.Value;
         dispatch({ type: types.CREATE_FAVORITE_USER, data: data });
       })
@@ -744,7 +719,6 @@ export const editprofile = (data, token) => {
     dispatch({ type: types.LOADING });
     axios .post(BaseUrl + "User/EditProfile", data, { headers: headers })
       .then(function(response) {
-        Toast.info('Congratulations! Update Success')
         console.log('response ===>', response.data)
 
         Actions.pop('');
