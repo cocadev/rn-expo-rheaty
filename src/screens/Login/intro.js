@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { Actions } from 'react-native-router-flux';
 import { images } from '../../common/images';
-import { LinearGradient } from 'expo';
+import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '../../common/colors';
 
 const width = Dimensions.get('window').width
@@ -49,8 +49,7 @@ const slides = [
 
 export default class Intro extends Component {
 
-    renderItem = (item) => {
-        console.log('PPPPPPPPPPPPPP', item)
+    _renderItem = (item) => {
         return (
             <LinearGradient
                 style={[styles.mainContent, {
@@ -96,7 +95,7 @@ export default class Intro extends Component {
     render() {
         return (
             <AppIntroSlider
-                renderItem={(item) => this.renderItem.bind(this, item)}
+                renderItem={this._renderItem}
                 slides={slides}
                 onDone={this._onDone}
                 renderDoneButton={this._renderDoneButton}

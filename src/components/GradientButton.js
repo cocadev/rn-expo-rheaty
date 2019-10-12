@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 import { colors } from '../common/colors'
-import { LinearGradient } from 'expo';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default class GradientButton extends React.Component {
 

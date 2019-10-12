@@ -10,7 +10,7 @@ import LottieScreen from '../../components/Lottie';
 import api from "../../service/api";
 import Cache from "../../utils/cache";
 import i from '../../common/i'
-import { LinearGradient } from 'expo';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
