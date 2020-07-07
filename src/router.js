@@ -68,16 +68,16 @@ export default class App extends PureComponent {
           <Router>
             
             <Scene>
-              <Scene key="walldetail" component={WallDetail} initial={false} hideNavBar/>
               <Scene key="intro" component={Intro} hideNavBar/>
               <Scene key="signin" component={SignIn} hideNavBar initial={false}/>
               <Scene key="signup" component={SignUp} hideNavBar initial={false}/>
               <Scene key="forgot" component={Forgot} initial={false} hideNavBar/>
               <Scene key="google" component={Google} initial={false} hideNavBar/>
+              <Scene key="walldetail" component={WallDetail} initial={false} hideNavBar/>
 
               <Drawer
                 hideNavBar
-                initial={false}
+                initial={true}
                 key="drawerMenu"
                 contentComponent={SideMenu}
                 drawerWidth={width/1.2}
@@ -88,7 +88,7 @@ export default class App extends PureComponent {
                 <Scene key="profile" component={Profile} initial={false} hideNavBar/>
                 <Scene key="walldetail" component={WallDetail} initial={false} hideNavBar/>
                 <Scene key="notification" component={Notification} initial={false} hideNavBar/>
-                <Scene key="inbox" component={Inbox} initial={false} hideNavBar/>
+                <Scene key="inbox" component={Inbox} initial={true} hideNavBar/>
 
               </Drawer>
             </Scene>
