@@ -50,8 +50,8 @@ export default class App extends PureComponent {
       'Montserrat-Thin': require('../assets/fonts/Montserrat-Thin.ttf'),
       'Montserrat-ThinItalic': require('../assets/fonts/Montserrat-ThinItalic.ttf'),
 
-      'ionicons': require('../assets/fonts/Montserrat-ThinItalic.ttf'),
-      'material-community': require('../assets/fonts/Montserrat-ThinItalic.ttf'),
+      // 'ionicons': require('../assets/fonts/Montserrat-ThinItalic.ttf'),
+      // 'material-community': require('../assets/fonts/Montserrat-ThinItalic.ttf'),
 
     });
     console.log('fonts loaded!');
@@ -88,7 +88,7 @@ export default class App extends PureComponent {
                 <Scene key="profile" component={Profile} initial={false} hideNavBar/>
                 <Scene key="walldetail" component={WallDetail} initial={false} hideNavBar/>
                 <Scene key="notification" component={Notification} initial={false} hideNavBar/>
-                <Scene key="inbox" component={Inbox} initial={true} hideNavBar/>
+                <Scene key="inbox" component={Inbox} initial={false} hideNavBar/>
 
               </Drawer>
             </Scene>
